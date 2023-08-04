@@ -1,35 +1,33 @@
 <a name="service"></a>
-	<h3>Service</h3>
-		You can obtain an OID as WEID and manage your own arc, e.g. by:
-		<ul><li>		
-			Free OID by <a href="https://oidplus.viathinksoft.com/oidplus/?goto=oidplus%3Acom.viathinksoft.freeoid" title="ViaThinkSoft">ViaThinkSoft</a>		  
-   </li><li>		
-			&quot;Private&quot; <a href="https://registry.frdl.de/?goto=com.frdlweb.freeweid">WEID</a> by Frdlweb
-			</li>	
-			<li>		
-			&quot;Public&quot; <a href="https://registry.frdl.de/?goto=oidplus%3Acom.viathinksoft.freeoid">OID</a> by Frdlweb
-			</li></ul>
-   <br><a name="code"></a>
-	<h3>Code</h3>
-	<ul><li><b>JavaScript</b><br>
-			<a href="https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.js">WeidOidConverter.js</a><br><br></li>	
-		<li><b>PHP</b><br>			<a href="https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.class.php">WeidOidConverter.class.php</a><br><br></li>
-		<li><b>Delphi</b><br>
-			<a href="https://github.com/danielmarschall/oidplus_dos/blob/master/WEID_Delphi.pas">WEID_Delphi.pas</a><br><br></li>
-		<li><b>Turbo Pascal</b><br>
-			<a href="https://github.com/danielmarschall/oidplus_dos/blob/master/WEID.PAS">WEID.pas</a><br>
-			<a href="https://github.com/danielmarschall/oidplus_dos/blob/master/VTSFUNCS.PAS">VTSFUNCS.pas</a> (Dependency)<br>
-			<br><br></li>	
-	</ul>	
-	<a name="software"></a>
-	<h3>Software</h3>
-	We recommend the software <a href="https://oidplus.com/">OIDplus</a>  if you like to run your own (OID/)WEID-Registry.
-	<br>
-	<br>	 
-	<br>
-	<br>
-	<a name="convert"></a>
-	<h3>Online OID/WEID Converter</h3>	
+
+### Service
+You can obtain an OID as WEID and manage your own arc, e.g. by:
+* Free OID by [ViaThinkSoft](https://oidplus.viathinksoft.com/oidplus/?goto=oidplus%3Acom.viathinksoft.freeoid)
+* Private [WEID](https://registry.frdl.de/?goto=com.frdlweb.freeweid) by Frdlweb
+* Public [OID](https://registry.frdl.de/?goto=oidplus%3Acom.viathinksoft.freeoid) by Frdlweb
+
+
+<a name="code"></a>
+
+### Code
+* JavaScript: [WeidOidConverter.js](https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.js)
+* PHP: [WeidOidConverter.class.php](https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.class.php)
+* Delphi: [WEID_Delphi.pas(https://github.com/danielmarschall/oidplus_dos/blob/master/WEID_Delphi.pas)
+* Turbo Pascal: [WEID.pas](https://github.com/danielmarschall/oidplus_dos/blob/master/WEID.PAS) [VTSFUNCS.pas (Dependency)](https://github.com/danielmarschall/oidplus_dos/blob/master/VTSFUNCS.PAS)
+
+
+<a name="software"></a>
+
+### Software
+We recommend the software [OIDplus](https://oidplus.com/) if you like to run your own (OID/)WEID-Registry.
+
+<a name="convert"></a>
+
+ ### Online OID/WEID Converter
+You can use our online converter to test the conversion between OID/WEID:
+
+
+ <h3>Online OID/WEID Converter</h3>	
 	<p>You can use our online converter to test the conversion between OID/WEID:</p>
 	<h4>Convert OID to WEID</h4>
 	<p><b>Input:</b> <input type="text" value="2.999" name="oid" id="oid" oninput="oidInputChanged();" style="width:500px"></p>
@@ -50,7 +48,7 @@
 <br />
 <br />
 <script>
-		oidInputChanged();
-		weidInputChanged();
+oidInputChanged();
+weidInputChanged();
 </script>
 <script>
