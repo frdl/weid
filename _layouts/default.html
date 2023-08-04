@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WEID - An alternate OID notation extension</title>
-
-      <meta charset="utf-8" />
+    <title>WEID - An alternate OID notation extension</title>
+    <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="WeidOidConverter.js"></script>
 </head>
+<style>
+    @media only screen and (min-width: 801px) {
+        body {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    }
+    body {
+        font-family: sans-serif;
+    }
+</style>
 <script>
 	function oidInputChanged() {
 		var tmp = WeidOidConverter.oid2weid(document.getElementById('oid').value);

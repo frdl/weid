@@ -19,20 +19,20 @@ The registry of sub-namespaces (URN prefixes) has currently following entries:
 
 * Namespace `weid:` (Also called "Class C" WEID)
   * Root OID is `1.3.6.1.4.1.37553.8`
-  * Example: OID `1.3.6.1.4.1.37553.8.32488192274` can be written as `weid:EXAMPLE-3` (3 is the check-digit)
+  * Example: OID `1.3.6.1.4.1.37553.8.32488192274` can be written as `weid:EXAMPLE-3` (`3` is the check-digit)
   * The registration of WEID Alphanumeric OIDs beneath this arc is managed by Webfan.de in order of FRDLWEB. You can assign as Private WEID by Frdlweb here: https://registry.frdl.de/?goto=com.frdlweb.freeweid
 
 
 * Sub-Namespace `weid:pen:` (Also called "Class B" WEID)
   * Root OID is `1.3.6.1.4.1`
-  * Example: OID `1.3.6.1.4.1.37476.9999` can be written as `weid:pen:SX0-7PR-6` (6 is the check-digit)
+  * Example: OID `1.3.6.1.4.1.37476.9999` can be written as `weid:pen:SX0-7PR-6` (`6` is the check-digit)
   * The registration of Private Enterprise Numbers (PEN) is managed by IANA. You can register a PEN here: 
     [https://pen.iana.org/pen/PenApplication.page](https://pen.iana.org/pen/PenApplication.page)
 
 
 * Sub-Namespace `weid:root:` (Also called "Class A" WEID)
   * Root OID is the OID tree root
-  * Example: OID `2.999` can bet written as `weid:root:2-RR-2` (2 is the check-digit)
+  * Example: OID `2.999` can bet written as `weid:root:2-RR-2` (`2` is the check-digit)
 
 
 * More sub-namespaces can be added to this registry in the future. The sub-namespaces must be defined by the [WEID consortium](https://www.startforum.de/s/weid/) (ViaThinkSoft and WebFan) in a [Specification Change](https://registry.frdl.de/?goto=oid%3A1.3.6.1.4.1.37553.8.1.8.1.6.1).
