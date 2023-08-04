@@ -1,24 +1,17 @@
-
- 
 <a name="service"></a>
 	<h3>Service</h3>
 		You can obtain an OID as WEID and manage your own arc, e.g. by:
-		<ul>	
-			<li>		
+		<ul><li>		
 			Free OID by <a href="https://oidplus.viathinksoft.com/oidplus/?goto=oidplus%3Acom.viathinksoft.freeoid" title="ViaThinkSoft">ViaThinkSoft</a>		  
-   </li>		
-			<li>		
+   </li><li>		
 			&quot;Private&quot; <a href="https://registry.frdl.de/?goto=com.frdlweb.freeweid">WEID</a> by Frdlweb
 			</li>	
 			<li>		
 			&quot;Public&quot; <a href="https://registry.frdl.de/?goto=oidplus%3Acom.viathinksoft.freeoid">OID</a> by Frdlweb
-			</li>	
-   </ul>
-   <br>
-	<a name="code"></a>
+			</li></ul>
+   <br><a name="code"></a>
 	<h3>Code</h3>
-	<ul>
-		<li><b>JavaScript</b><br>
+	<ul><li><b>JavaScript</b><br>
 			<a href="https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.js">WeidOidConverter.js</a><br><br></li>	
 		<li><b>PHP</b><br>			<a href="https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.class.php">WeidOidConverter.class.php</a><br><br></li>
 		<li><b>Delphi</b><br>
@@ -56,11 +49,11 @@
 	<br /><strong frdl-if-js-remove="2000">Loading...</strong>		
 <br />
 <br />
-	<script>
+<script>
 		oidInputChanged();
 		weidInputChanged();
-	</script>
-	<script>
+</script>
+<script>
 	function oidInputChanged() {
 		var tmp = WeidOidConverter.oid2weid(document.getElementById('oid').value);
 		if ((tmp === false) || (tmp.weid === false) || (tmp.oid === false)) {
@@ -81,4 +74,4 @@
 			document.getElementById('oid2b').innerHTML = '<b>OID: </b>'+tmp.oid;
 		}
 	}
-	</script>
+</script>
