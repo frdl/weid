@@ -54,24 +54,3 @@
 		weidInputChanged();
 </script>
 <script>
-	function oidInputChanged() {
-		var tmp = WeidOidConverter.oid2weid(document.getElementById('oid').value);
-		if ((tmp === false) || (tmp.weid === false) || (tmp.oid === false)) {
-			document.getElementById('weid2a').innerHTML = '<font color="red">Invalid input</font>';
-			document.getElementById('oid2a').innerHTML = '&nbsp;';
-		} else {
-			document.getElementById('weid2a').innerHTML = '<b>WEID: </b>'+tmp.weid;
-			document.getElementById('oid2a').innerHTML = '<b>OID: </b>'+tmp.oid;
-		}
-	}
-	function weidInputChanged() {
-		var tmp = WeidOidConverter.weid2oid(document.getElementById('weid').value);
-		if ((tmp === false) || (tmp.weid === false) || (tmp.oid === false)) {
-			document.getElementById('weid2b').innerHTML = '<font color="red">Invalid input</font>';
-			document.getElementById('oid2b').innerHTML = '&nbsp;';
-		} else {
-			document.getElementById('weid2b').innerHTML = '<b>WEID: </b>'+tmp.weid;
-			document.getElementById('oid2b').innerHTML = '<b>OID: </b>'+tmp.oid;
-		}
-	}
-</script>
