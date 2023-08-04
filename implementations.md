@@ -27,24 +27,25 @@ We recommend the software [OIDplus](https://oidplus.com/) if you like to run you
 You can use our online converter to test the conversion between OID/WEID:
 
 
-<h3>Online OID/WEID Converter</h3>	
-	<p>You can use our online converter to test the conversion between OID/WEID:</p>
-	<h4>Convert OID to WEID</h4>
-	<p><b>Input:</b> <input type="text" value="2.999" name="oid" id="oid" oninput="oidInputChanged();" style="width:500px"></p>
-	<div id="weid2a"></div>
-	<div id="oid2a"></div>
-	<br>
-	<h4>Convert WEID to OID</h4>
-	<p><b>Input:</b> <input type="text" value="weid:EXAMPLE-?" name="weid" id="weid" oninput="weidInputChanged();" style="width:500px"></p>
-	<div id="weid2b"></div>
-	<div id="oid2b"></div>
-	<br>
-	<br><br><br>	
-	<a name="test"></a>
-	<h3>Online OID/WEID-Converter (Beta)</h3>
-	<p>You can use our online converter to test the conversion between OID/WEID:</p>
-	<frdlweb-oid2weid></frdlweb-oid2weid>
-	<br /><strong frdl-if-js-remove="2000">Loading...</strong>		
+
+
+<h3>Online OID/WEID Converter</h3><p>You can use our online converter to test the conversion between OID/WEID:</p>
+<h4>Convert OID to WEID</h4>
+<p><b>Input:</b> <input type="text" value="2.999" name="oid" id="oid" oninput="oidInputChanged();" style="width:500px"></p>
+<div id="weid2a"></div>
+<div id="oid2a"></div>
+<br>
+<h4>Convert WEID to OID</h4>
+<p><b>Input:</b> <input type="text" value="weid:EXAMPLE-?" name="weid" id="weid" oninput="weidInputChanged();" style="width:500px"></p>
+<div id="weid2b"></div>
+<div id="oid2b"></div>
+<br>
+<br><br><br>	
+<a name="test"></a>
+<h3>Online OID/WEID-Converter (Beta)</h3>
+<p>You can use our online converter to test the conversion between OID/WEID:</p>
+<frdlweb-oid2weid></frdlweb-oid2weid>
+<br /><strong frdl-if-js-remove="2000">Loading...</strong>		
 <br />
 <br />
 <script>
