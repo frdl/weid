@@ -42,10 +42,14 @@ You can use our online converter to test the conversion between OID/WEID:
 <br>
 <br><br><br>	
 <a name="test"></a>
+
+<!--
 <h3>Online OID/WEID-Converter (Beta)</h3>
 <p>You can use our online converter to test the conversion between OID/WEID:</p>
 <frdlweb-oid2weid></frdlweb-oid2weid>
-<br /><strong frdl-if-js-remove="2000">Loading...</strong>		
+<br /><strong frdl-if-js-remove="2000">Loading...</strong>
+-->
+
 <br />
 <br />
 <script>
