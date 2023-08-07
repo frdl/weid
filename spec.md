@@ -95,7 +95,7 @@ Changes with [Spec Change 11: Proprietary Namespaces](https://github.com/frdl/we
 * Since the vendor specifies the namespace, it is up to the vendor if they allow the mapping of their WEID-Namespace to the OID-Tree. In comparison to class A/B/C/D WEID which are 100% OID compatible, custom WEID might not be OID-compatible at all.
 * Currently, the following custom namespaces are known:
 
-    * `weid:x-frdl:[Base36_NS]-[SubNS]:[Base36_ID]-[CheckDigit]` to be defined/implemented by Frdlweb
+    * `weid:x-frdl:[Base36_NS]-[SubNS]:[Base36_ID]-[CheckDigit]` to be defined/implemented by Frdlweb ([base idea here](https://frdl.de/dynamic-weid-namespace-class)).
     * If you know more namespaces, or if you are the author of a custom namespace, please let us know.
 
 Additional notes:
