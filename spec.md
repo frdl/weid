@@ -8,7 +8,7 @@ There are three well-known notations for OIDs:
 - ASN.1 notation: `{joint-iso-itu-t(2) example(999)}`
 - OID-IRI notation: `/Joint-ISO-ITU-T/Example`
 
-WEID is another notation for OIDs, developed by Till Wehowski and Daniel Marschall:
+WEID (WEhowski IDentifier) is another notation for OIDs, developed by Till Wehowski and Daniel Marschall:
 
 - WEID notation: `weid:root:2-RR-2`
 
@@ -77,12 +77,33 @@ Recommendations for WEID notation (as of Spec Change 9):
 
 * In Spec Change 9 (08 March 2022), an alternative syntax of WEIDs is defined. This alternative syntax replaces the checksum with a wildcard in the form of a question mark symbol, for example, `weid:root:2-RR-?` instead of `weid:root:2-RR-2`. One useful scenario can be the documentation of incomplete/template WEIDs. Another usage is converters (like our [online converter](https://weid.info/implementations.html)) which can help you replace the wildcard with the correct checksum.
 
+Changes with [Spec Change 10: Domain-WEID](https://github.com/frdl/weid/issues/3):
+
+* Spec Change 10 (07 August 2023) allows domain names to be used as WEID namespace.
+* The notation `weid:example.com:ABC-DEF-?` is equal to `weid:9-DNS-COM-EXAMPLE-ABC-DEF-?`.
+* The resulting WEID is called Domain-WEID or "Class D" WEID.
+* Note that the check digit is equal for both notations since it is based on the resulting OID.
+* TLD-Only domains are not allowed for the purpose of forming a Domain-WEID.
+* A Domain-WEID can be converted to Class A/B/C WEID, but the reverse conversion is ambiguous ("where does the domain name end and the identifier part start?")
+
+Changes with [Spec Change 11: Proprietary Namespaces](https://github.com/frdl/weid/issues/4)
+
+* Spec Change 11 (07 August 2023) allows custom / vendor-specific WEID namespaces.
+* Such namespaces must begin with `x-`, for example:  `weid:x-contoso:ABC-DEF-?` could be a WEID defined by Contoso Ltd.
+* As usual for WEID, the namespace is case-insensitive.
+* The vendor has complete control over the namespace and can define the behavior. However, it is recommended to make use of Base36 and the weLuhn check digit.
+* Since the vendor specifies the namespace, it is up to the vendor if they allow the mapping of their WEID-Namespace to the OID-Tree. In comparison to class A/B/C/D WEID which are 100% OID compatible, custom WEID might not be OID-compatible at all.
+* Currently, the following custom namespaces are known:
+
+    * `weid:x-frdl:[base36_NS]-[SubNS]:[Base36_ID]-[CheckDigit]` to be defined/implemented by Frdlweb
+    * If you know more namespaces, or if you are the author of a custom namespace, please let us know.
+
 Additional notes:
 
-* Any WEID can be represented by an OID and vice-versa. Therefore, a WEID has all attributes of an OID (e.g. it can be used to generate a Version 5 SHA1 name-based UUID with the Namespace UUID `6ba7b812-9dad-11d1-80b4-00c04fd430c8` according to IETF RFC-4122).
+* Any WEID (except for Custom WEID as defined in Spec Change 11) can be represented by an OID and vice-versa. Therefore, a WEID has all attributes of an OID (e.g. it can be used to generate a Version 5 SHA1 name-based UUID with the Namespace UUID `6ba7b812-9dad-11d1-80b4-00c04fd430c8` according to IETF RFC-4122).
 * Please note that some clients handling OIDs cannot handle arcs that have a specific size ([more information here](https://misc.daniel-marschall.de/asn.1/oid_facts.html)). Implementers of WEID strongly encourage allowing arbitrary length arcs (i.e. implementing BigInteger rather than 32-bit integers)
-* In the OIDplus Registration Authority at arc [1.3.6.1.4.1.37553.8.1.8.1.6](https://registry.frdl.de/?goto=oid%3A1.3.6.1.4.1.37553.8.1.8.1.6) you can find more information and announcements of changes.
+* At www.weid.info you can find more information and announcements of changes.
 
-The current version of the specification is 9, which is identified with the OID 1.3.6.1.4.1.37553.8.1.8.1.6.1.9 (weid:1-8-1-6-1-9-2).
+The current version of the specification is 11, which is identified with the OID 1.3.6.1.4.1.37553.8.1.8.1.6.1.11 (weid:1-8-1-6-1-B-7).
 
 © WEID is developed by [Daniel Marschall](https://www.daniel-marschall.de/) / [ViaThinkSoft](https://www.viathinksoft.com/) and [Till Wehowski](https://webfan.de/u/frdl-github-2658030).
