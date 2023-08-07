@@ -1,6 +1,6 @@
 # WEID Specification
 
-An Object Identifier (OID) is an extensively used identification mechanism jointly developed by ITU-T and ISO/IEC for naming any type of object, concept, or "thing" with a globally unambiguous name. (More information about OIDs can be found at [www.oid-info.com](https://www.oid-info.com) )
+An Object Identifier (OID) is an extensively used identification mechanism jointly developed by ITU-T and ISO/IEC for naming any type of object, concept, or "thing" with a globally unambiguous name. (More information about OIDs can be found at [www.oid-info.com](https://www.oid-info.com))
 
 There are three well-known notations for OIDs:
 
@@ -79,23 +79,23 @@ Recommendations for WEID notation (as of Spec Change 9):
 
 Changes with [Spec Change 10: Domain-WEID](https://github.com/frdl/weid/issues/3):
 
-* Spec Change 10 (07 August 2023) allows domain names to be used as WEID namespace.
+* Spec Change 10 (07 August 2023) allows domain names to be used as WEID sub-namespace.
 * The notation `weid:example.com:ABC-DEF-?` is equal to `weid:9-DNS-COM-EXAMPLE-ABC-DEF-?`.
 * The resulting WEID is called Domain-WEID or "Class D" WEID.
 * Note that the check digit is equal for both notations since it is based on the resulting OID.
 * TLD-Only domains are not allowed for the purpose of forming a Domain-WEID.
-* A Domain-WEID can be converted to Class A/B/C WEID, but the reverse conversion is ambiguous ("where does the domain name end and the identifier part start?")
+* A Domain-WEID can be converted to Class A/B/C WEID, but the reverse conversion is ambiguous ("*where does the domain name end and the identifier part start?*")
 
-Changes with [Spec Change 11: Proprietary Namespaces](https://github.com/frdl/weid/issues/4)
+Changes with [Spec Change 11: Proprietary Namespaces](https://github.com/frdl/weid/issues/4):
 
-* Spec Change 11 (07 August 2023) allows custom / vendor-specific WEID namespaces.
+* Spec Change 11 (07 August 2023) allows custom / vendor-specific WEID sub-namespaces.
 * Such namespaces must begin with `x-`, for example:  `weid:x-contoso:ABC-DEF-?` could be a WEID defined by Contoso Ltd.
 * As usual for WEID, the namespace is case-insensitive.
 * The vendor has complete control over the namespace and can define the behavior. However, it is recommended to make use of Base36 and the weLuhn check digit.
 * Since the vendor specifies the namespace, it is up to the vendor if they allow the mapping of their WEID-Namespace to the OID-Tree. In comparison to class A/B/C/D WEID which are 100% OID compatible, custom WEID might not be OID-compatible at all.
 * Currently, the following custom namespaces are known:
 
-    * `weid:x-frdl:[base36_NS]-[SubNS]:[Base36_ID]-[CheckDigit]` to be defined/implemented by Frdlweb
+    * `weid:x-frdl:[Base36_NS]-[SubNS]:[Base36_ID]-[CheckDigit]` to be defined/implemented by Frdlweb
     * If you know more namespaces, or if you are the author of a custom namespace, please let us know.
 
 Additional notes:
