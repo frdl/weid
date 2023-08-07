@@ -137,7 +137,7 @@ var WeidOidConverter = {
 				// Spec Change 10: Domain-WEID ( https://github.com/frdl/weid/issues/3 )
 				if (weid.split(":").length != 3) return false;
 				domainrest = weid.split(":")[2].split("-");
-				var alt_weid = "weid:9-DNS-" + domainpart.join("-").toUpperCase() + "-" + domainrest.join("-");
+				var alt_weid = "weid:9-DNS-" + domainpart.reverse().join("-").toUpperCase() + "-" + domainrest.join("-");
 				return WeidOidConverter.weid2oid(alt_weid);
 			}
 		}
