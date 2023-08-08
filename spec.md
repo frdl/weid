@@ -80,6 +80,7 @@ Recommendations for WEID notation (as of Spec Change 9):
 Changes with [Spec Change 10: Domain-WEID](https://github.com/frdl/weid/issues/3):
 
 * Spec Change 10 (07 August 2023) allows domain names to be used as WEID sub-namespace.
+* All WEID sub-namespaces containing at least one dot (`.`) are treated as domain names.
 * The notation `weid:example.com:ABC-DEF-?` is equal to `weid:9-DNS-COM-EXAMPLE-ABC-DEF-?`.
 * The resulting WEID is called Domain-WEID or "Class D" WEID.
 * Note that the check digit is equal for both notations since it is based on the resulting OID.
@@ -90,7 +91,8 @@ Changes with [Spec Change 11: Proprietary Namespaces](https://github.com/frdl/we
 
 * Spec Change 11 (07 August 2023) allows custom / vendor-specific WEID sub-namespaces.
 * Such namespaces must begin with `x-`, for example:  `weid:x-contoso:ABC-DEF-?` could be a WEID defined by Contoso Ltd.
-* As usual for WEID, the namespace is case-insensitive.
+* As usual for WEID, the namespace is case insensitive.
+* To avoid confusion with Spec Change 10 Domain-WEID, the sub-namespace must not contain a dot (`.`).
 * The vendor has complete control over the namespace and can define the behavior. However, it is recommended to make use of Base36 and the weLuhn check digit.
 * Since the vendor specifies the namespace, it is up to the vendor if they allow the mapping of their WEID-Namespace to the OID-Tree. In comparison to class A/B/C/D WEID which are 100% OID compatible, custom WEID might not be OID-compatible at all.
 * Currently, the following custom namespaces are known:
