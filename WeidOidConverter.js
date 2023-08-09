@@ -4,7 +4,7 @@
 /**
 * WEID<=>OID Converter
 * (c) Webfan.de, ViaThinkSoft
-* Revision 2023-08-07
+* Revision 2023-08-09
 **/
 
 // What is a WEID?
@@ -129,14 +129,12 @@ var WeidOidConverter = {
 		var base = null;
 		namespace = namespace.toLowerCase(); // namespace is case insensitive
 
-		var domainpart = [];
-		var domainrest = [];
 		if (namespace.startsWith("weid:")) {
-			domainpart = weid.split(":")[1].split(".");
+			var domainpart = weid.split(":")[1].split(".");
 			if (domainpart.length > 1) {
-				// Spec Change 10: Domain-WEID ( https://github.com/frdl/weid/issues/3 )
+				// Spec Change 10: Class D / Domain-WEID ( https://github.com/frdl/weid/issues/3 )
 				if (weid.split(":").length != 3) return false;
-				domainrest = weid.split(":")[2].split("-");
+				var domainrest = weid.split(":")[2].split("-");
 				var alt_weid = "weid:9-DNS-" + domainpart.reverse().join("-").toUpperCase() + "-" + domainrest.join("-");
 				return WeidOidConverter.weid2oid(alt_weid);
 			}
