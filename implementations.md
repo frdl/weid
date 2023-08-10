@@ -11,9 +11,9 @@ You can obtain an OID as WEID and manage your own arc, e.g. by:
 
 ### Code
 * JavaScript (supports Spec Change 11): [WeidOidConverter.js](https://github.com/frdl/weid/blob/gh-pages/WeidOidConverter.js)
-* PHP (supports Spec Change 9): [WeidOidConverter.class.php](https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.class.php)
-* Delphi (supports Spec Change 9): [WEID_Delphi.pas](https://github.com/danielmarschall/oidplus_dos/blob/master/WEID_Delphi.pas)
-* Turbo Pascal (supports Spec Change 9): [WEID.pas](https://github.com/danielmarschall/oidplus_dos/blob/master/WEID.PAS) [VTSFUNCS.pas (Dependency)](https://github.com/danielmarschall/oidplus_dos/blob/master/VTSFUNCS.PAS)
+* PHP (supports Spec Change 11): [WeidOidConverter.class.php](https://github.com/danielmarschall/oidplus/blob/master/plugins/viathinksoft/objectTypes/oid/WeidOidConverter.class.php)
+* Delphi (supports Spec Change 11): [WEID_Delphi.pas](https://github.com/danielmarschall/oidplus_dos/blob/master/WEID_Delphi.pas)
+* Turbo Pascal (supports Spec Change 11): [WEID.pas](https://github.com/danielmarschall/oidplus_dos/blob/master/WEID.PAS) and [VTSFUNCS.pas (Dependency)](https://github.com/danielmarschall/oidplus_dos/blob/master/VTSFUNCS.PAS)
 
 
 <a name="software"></a>
