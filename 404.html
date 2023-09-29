@@ -3,15 +3,17 @@ permalink: /404.html
 ---
 
 <h1>Not found.</h1>
+...loading fallbacks...
 <script>
 (async()=>{
 /*
 * Edit this file: https://webfan.de/apps/files/?dir=/public/shared/weid.info&openfile=336739&scrollto=fallback-404.html#filestexteditor
 */
- var c = await fetch('https://webfan.de/apps/sharingpath/weid/public/shared/weid.info/fallback-404.html');
+ var c = await fetch('https://webfan.de/apps/sharingpath/weid/public/shared/weid.info/fallback-404.html'
+		    +'?cache-bust='+(new Date()).getFullYear()+'/'+((new Date()).getMonth()+1)+'/'+((new Date()).getUTCDate())
+		    );
  			  document.open(  );	
 			  document.write(  await c.text()  );	  
 			  document.close(  );	
 })();
 </script>
-
