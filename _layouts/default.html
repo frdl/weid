@@ -102,7 +102,19 @@ d.head.prepend(s);
 <script src="https://cdn.startdir.de/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>
   function addDarkmodeWidget() {
-    new Darkmode().showWidget();
+    new Darkmode({      
+			bottom: '64px',    
+			right: '32px',     
+			left: 'unset',     
+			time: '0.9s',     
+			mixColor: '#fff',    
+			backgroundColor: 'transparent',    
+			buttonColorDark: '#100f2c',     
+			buttonColorLight: '#fff',     
+			label: '🌓',     
+			saveInCookies: true,   
+			autoMatchOsTheme: true   
+		}).showWidget();
   }
   window.addEventListener('load', addDarkmodeWidget);
 </script> 
