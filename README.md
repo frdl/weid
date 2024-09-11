@@ -1,4 +1,3 @@
-# weid
-The WEID Consortium
 
-[WEID.info](https://weid.info)
+
+[This repository was moved here...](https://github.com/WEID-Consortium/weid.info/tree/gh-pages)
