@@ -1,3 +1,7 @@
+# Moved
+The respository has moved, please visit [the new version](https://github.com/WEID-Consortium/weid.info)
+
+
 # WEID Consortium
 The WEID Consortium is a group of IT-workers and companies leaded by Frdlweb and ViaThinkSoft who work on network and internet protocols, specially identifiers, look-ups and registries.
 
